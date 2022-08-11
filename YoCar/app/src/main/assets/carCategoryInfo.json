@@ -1,0 +1,17 @@
+[
+  {
+    "carCategoryName": "Sedan",
+    "carUrl": "https://www.pngfind.com/pngs/m/595-5955684_honda-accord-ex-2019-hd-png-download.png",
+    "uid": "1234"
+  },
+  {
+    "carCategoryName": "Hatchback",
+    "carUrl": "https://w7.pngwing.com/pngs/608/499/png-transparent-2016-toyota-corolla-hatchback-compact-car-continuously-variable-transmission-blue-car-compact-car-sedan-car.png",
+    "uid": "12345"
+  },
+  {
+    "carCategoryName": "SUV",
+    "carUrl": "https://carsguide-res.cloudinary.com/image/upload/f_auto,fl_lossy,q_auto,t_default/v1/editorial/my18-prado-mm-2.png",
+    "uid": "123456"
+  }
+]

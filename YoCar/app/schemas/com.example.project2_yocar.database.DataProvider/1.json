@@ -1,0 +1,120 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "547301b1a77f120848b5b8821ae6798b",
+    "entities": [
+      {
+        "tableName": "CarInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`carId` TEXT NOT NULL, `carCategoryId` TEXT, `carCategoryName` TEXT, `carName` TEXT, `carPrice` TEXT, `carDetail` TEXT, `carUrl1` TEXT, `carUrl2` TEXT, `carUrl3` TEXT, `clickNum` INTEGER NOT NULL, PRIMARY KEY(`carId`))",
+        "fields": [
+          {
+            "fieldPath": "carId",
+            "columnName": "carId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "carCategoryId",
+            "columnName": "carCategoryId",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carCategoryName",
+            "columnName": "carCategoryName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carName",
+            "columnName": "carName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carPrice",
+            "columnName": "carPrice",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carDetail",
+            "columnName": "carDetail",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carUrl1",
+            "columnName": "carUrl1",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carUrl2",
+            "columnName": "carUrl2",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carUrl3",
+            "columnName": "carUrl3",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "clickNum",
+            "columnName": "clickNum",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "carId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "CarCategoryInfo",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`uid` TEXT NOT NULL, `carCategoryName` TEXT, `carUrl` TEXT, PRIMARY KEY(`uid`))",
+        "fields": [
+          {
+            "fieldPath": "uid",
+            "columnName": "uid",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "carCategoryName",
+            "columnName": "carCategoryName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "carUrl",
+            "columnName": "carUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "uid"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '547301b1a77f120848b5b8821ae6798b')"
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+    </data>
+
+ <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        app:contentInsetStartWithNavigation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/black"
+        app:titleCentered="true"
+        app:title="YoCar" />
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        app:queryHint="Search"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+    <TextView
+        android:id="@+id/car_mostly_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mostly Viewed"
+        android:layout_marginTop="10dp"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:background="@android:color/background_light"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_view" />
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/rv_mostly_view"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="32dp"
+         android:layout_marginRight="10dp"
+         app:layout_constraintHorizontal_bias="1.0"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toTopOf="@+id/car_mostly_view" />
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/rv_category_view"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintHorizontal_bias="0.0"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/rv_mostly_view"
+
+         app:layout_constraintVertical_bias="1.0"
+         app:layout_goneMarginTop="10dp" />
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
